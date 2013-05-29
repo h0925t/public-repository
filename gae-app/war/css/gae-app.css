@@ -1,0 +1,8 @@
+/* 複数行入力フィールド */
+.fields > .input > textarea {
+	height: 100px;
+}
+
+.block {
+	margin: 5px 5px 5px 10px;
+}
