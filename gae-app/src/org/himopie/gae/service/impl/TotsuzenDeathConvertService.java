@@ -33,7 +33,7 @@ public class TotsuzenDeathConvertService implements ConvertService<String> {
 		String topPart = createTopLine(max);
 		String bottomPart = createBottomLine(max);
 
-		String result = topPart + "\n" + StringUtils.join(middlePart, "\n") + "\n" + bottomPart; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+		String result = topPart + "\n" + StringUtils.join(middlePart, "\n") + "\n" + bottomPart + "\n"; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$
 		this.logger.info("OUTPUT : " + result); //$NON-NLS-1$
 		return result;
 	}

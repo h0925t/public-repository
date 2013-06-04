@@ -33,6 +33,8 @@
 			a.attr("data-text", contents);
 			a.attr("data-lang", "ja");
 			a.attr("data-size", "large");
+			a.attr("data-count", "horizontal");
+			a.attr("data-url", "");
 			$("#tweetArea").html(a);
 			twttr.widgets.load();
 		}
