@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}藤原語変換ツール{% endblock%}
+{% block content %}
+
+<div class="row description">
+	<h2>藤原語変換ツール</h2>
+	<p>
+		藤原語っぽくしてみます。<br /> 記号は変換しないようにしようと思ったけどPythonの全角記号判定方法が分かんなかった( ◠‿◠ )
+	</p>
+</div>
+
+<div class="row">変換前テキスト</div>
+
+<div class="row">
+	<div class="span12">
+		<form action="/fujiwara" method="post" accept-charset="utf-8">
+			<textarea name="inputMessage" rows="3" class="span12">{{ inputMessage }}</textarea>
+			<input type="submit" value="変゛換゛！" class="btn btn-primary" /> <input
+				type="button" onclick="location.href='/fujiwara'" value="リ゛セ゛ッ゛ト゛"
+				class="btn" />
+		</form>
+	</div>
+</div>
+
+<div class="row">変換後テキスト</div>
+
+<div class="row">
+	<div class="span12">
+		<textarea name="outputMessage" rows="5" class="span12"
+			id="outputMessage">{{ outputMessage }}</textarea>
+		<a href="#" onclick="return tweetTextarea('outputMessage');">結果をTweetする</a>
+	</div>
+</div>
+
+{% endblock %}

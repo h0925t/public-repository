@@ -1,0 +1,19 @@
+application: himopie-gae-python
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: no
+
+handlers:
+- url: /css
+  static_dir: css
+- url: /javascript
+  static_dir: javascript
+- url: /lib
+  static_dir: lib
+- url: /templates
+  script: templates/(.html)
+- url: /fujiwara
+  script: fujiwara/fujiwara.py
+- url: /.*
+  script: index/index.py

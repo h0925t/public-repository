@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css" type="text/css" media="all" />
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+<script src="lib/jquery/jquery-2.0.3.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="javascript/common.js"></script>
+<title>{% block title %}Title{% endblock %}</title>
+</head>
+
+<body style="padding-top: 60px;">
+
+	<div class="container">
+		<!-- Header -->
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<button type="button" class="btn btn-navbar" data-toggle="collapse"
+						data-target=".nav-collapse">
+						<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+							class="icon-bar"></span>
+					</button>
+					<a class="brand" href="/">Top</a>
+					<div class="nav-collapse collapse">
+						<ul class="nav">
+							<li><a href="/fujiwara">Fujiwara</a></li>
+						</ul>
+					</div>
+					<!--/.nav-collapse -->
+				</div>
+			</div>
+		</div>
+		{% block content %}Content{% endblock %}
+	</div>
+</body>
+</html>
