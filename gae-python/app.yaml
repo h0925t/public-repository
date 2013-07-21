@@ -11,9 +11,15 @@ handlers:
   static_dir: javascript
 - url: /lib
   static_dir: lib
-- url: /templates
-  script: templates/(.html)
-- url: /fujiwara
-  script: fujiwara/fujiwara.py
+- url: /fujiwara/?
+  script: handler/fujiwara/fujiwara.py
 - url: /.*
-  script: index/index.py
+  script: handler/index/index.py
+
+libraries:
+- name: django
+  version: "1.4"
+
+env_variables:
+    DJANGO_SETTINGS_MODULE: 'settings'
+
